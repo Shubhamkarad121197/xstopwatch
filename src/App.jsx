@@ -32,7 +32,7 @@ const App = () => {
   return (
     <div>
       <h1>Stopwatch</h1>
-      <span>Time {time}</span>
+      <span>Time: {time}</span>
       <div>
         <button onClick={handleStartStop}>{isRunning ? 'Stop' : 'Start'}</button>
         <button onClick={resetTimer}>Reset</button>
