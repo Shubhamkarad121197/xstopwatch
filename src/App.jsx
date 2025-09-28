@@ -25,15 +25,13 @@ const App = () => {
     setIsRunning(false);
   };
 
-
-  const seconds = timer % 60;
   const minutes = Math.floor((timer / 60) % 60);
-  const hours = Math.floor(timer / 3600);
-  const time = `${hours}:${minutes}:${seconds}`;
+  const seconds = timer % 60;
+  const time = `${minutes}:${seconds.toString().padStart(2, '0')}`;
 
   return (
     <div>
-      <h1>Stop Watch</h1>
+      <h1>Stopwatch</h1>
       <span>Time {time}</span>
       <div>
         <button onClick={handleStartStop}>{isRunning ? 'Stop' : 'Start'}</button>
